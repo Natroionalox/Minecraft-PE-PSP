@@ -8,7 +8,7 @@ struct CreativeEntry {
     short         aux;
 };
 
-enum { CREATIVE_TABS = 4 };
+enum { CREATIVE_TABS = 5 };
 
 namespace CreativeItems {
 

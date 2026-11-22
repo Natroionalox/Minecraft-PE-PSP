@@ -425,6 +425,7 @@ const char* getBlockName(short id, unsigned char data) {
             case ITEM_PAINTING: return "Painting";
             case ITEM_SIGN: return "Sign";
             case ITEM_BOW: return "Bow";
+            case ITEM_SHOVEL_TNT: return "Bowl Pickaxe";
 
             case ITEM_SWORD_WOOD: return "Wooden Sword";
             case ITEM_SWORD_STONE: return "Stone Sword";

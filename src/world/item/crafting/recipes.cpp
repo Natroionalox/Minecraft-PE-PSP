@@ -64,16 +64,18 @@ Recipes::Recipes() {
             { "XX",  "X#",  " #"  },
             { "XX",  " #",  " #"  },
         };
-        const short materialIds[5] = { BLOCK_PLANKS, BLOCK_COBBLESTONE,
-                                       ITEM_IRON_INGOT, ITEM_DIAMOND, ITEM_GOLD_INGOT };
-        const short map[4][5] = {
+        const short matTypes = 6;
+        const short toolTypes = 4;
+        const short materialIds[matTypes] = { BLOCK_PLANKS, BLOCK_COBBLESTONE,
+                                       ITEM_IRON_INGOT, ITEM_DIAMOND, ITEM_GOLD_INGOT, ITEM_BOWL };
+        const short map[toolTypes][matTypes] = {
             { ITEM_PICKAXE_WOOD, ITEM_PICKAXE_STONE, ITEM_PICKAXE_IRON, ITEM_PICKAXE_DIAMOND, ITEM_PICKAXE_GOLD },
-            { ITEM_SHOVEL_WOOD,  ITEM_SHOVEL_STONE,  ITEM_SHOVEL_IRON,  ITEM_SHOVEL_DIAMOND,  ITEM_SHOVEL_GOLD  },
+            { ITEM_SHOVEL_WOOD,  ITEM_SHOVEL_STONE,  ITEM_SHOVEL_IRON,  ITEM_SHOVEL_DIAMOND,  ITEM_SHOVEL_GOLD,  ITEM_SHOVEL_TNT},
             { ITEM_HATCHET_WOOD, ITEM_HATCHET_STONE, ITEM_HATCHET_IRON, ITEM_HATCHET_DIAMOND, ITEM_HATCHET_GOLD },
             { ITEM_HOE_WOOD,     ITEM_HOE_STONE,     ITEM_HOE_IRON,     ITEM_HOE_DIAMOND,     ITEM_HOE_GOLD     },
         };
-        for (int m = 0; m < 5; ++m)
-            for (int t = 0; t < 4; ++t) {
+        for (int m = 0; m < matTypes; ++m)
+            for (int t = 0; t < toolTypes; ++t) {
                 Type mat = (materialIds[m] < 256) ? TILE('X', materialIds[m]) : ITEM('X', materialIds[m]);
                 addShapedRecipe(ItemInstance(map[t][m], 1, 0),
                                 shapes[t][0], shapes[t][1], shapes[t][2],

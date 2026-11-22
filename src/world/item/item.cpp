@@ -88,6 +88,7 @@ void Item::initItems() {
     new HoeItem(ITEM_HOE_IRON,    Tier::IRON,    ic(2, 8));
     new HoeItem(ITEM_HOE_DIAMOND, Tier::EMERALD, ic(3, 8));
     new HoeItem(ITEM_HOE_GOLD,    Tier::GOLD,    ic(4, 8));
+    new ShovelItem (ITEM_SHOVEL_TNT,      Tier::IRON,    ic(7, 9));
 
     new ArmorItem(ITEM_HELMET_CLOTH,     ArmorItem::CLOTH,   ArmorItem::SLOT_HEAD,  ic(0, 0));
     new ArmorItem(ITEM_CHESTPLATE_CLOTH, ArmorItem::CLOTH,   ArmorItem::SLOT_TORSO, ic(0, 1));
@@ -186,6 +187,7 @@ void Item::initItems() {
     new BowItem(ITEM_BOW);
     new SpawnEggItem();
 
+    //i believe this is list of every item in the game, the number indicates the category as defined in item.h
     {
         static const struct { short id; signed char cat; } kCat[] = {
 
@@ -197,7 +199,7 @@ void Item::initItems() {
             { ITEM_HATCHET_DIAMOND, 2 },{ ITEM_SWORD_GOLD, 2 },{ ITEM_SHOVEL_GOLD, 2 },
             { ITEM_PICKAXE_GOLD, 2 },{ ITEM_HATCHET_GOLD, 2 },
             { ITEM_HOE_WOOD, 2 }, { ITEM_HOE_STONE, 2 }, { ITEM_HOE_IRON, 2 },
-            { ITEM_HOE_DIAMOND, 2 }, { ITEM_HOE_GOLD, 2 },
+            { ITEM_HOE_DIAMOND, 2 }, { ITEM_HOE_GOLD, 2 }, { ITEM_SHOVEL_TNT, 2},
             { ITEM_FLINT_AND_STEEL, 2 }, { ITEM_BOW, 2 }, { ITEM_ARROW, 2 }, { ITEM_COAL, 2 },
             { ITEM_BUCKET, 2 },
             { ITEM_STRING, 2 }, { ITEM_FEATHER, 2 }, { ITEM_GUNPOWDER, 2 }, { ITEM_FLINT, 2 },
@@ -260,6 +262,9 @@ void Item::initItems() {
             if (items[kCat[i].id]) items[kCat[i].id]->category = kCat[i].cat;
     }
 
+    //genuinely have no idea
+    //changing the number besides stone made it move to different category in cre menu
+    //removing the item completely appears to do nothing actually
     {
         static const struct { short id; unsigned char tab; } kTab[] = {
             { BLOCK_STONE, 1 }, { BLOCK_GRASS, 1 }, { BLOCK_DIRT, 1 }, { BLOCK_COBBLESTONE, 1 },
@@ -336,6 +341,8 @@ void Item::initItems() {
 
             { BLOCK_PUMPKIN, 2 }, { BLOCK_PUMPKIN_LIT, 2 }, { BLOCK_PUMPKIN_STEM, 2 },
             { BLOCK_CARROTS, 2 }, { BLOCK_POTATOES, 2 }, { BLOCK_BEETROOT, 2 },
+
+            { ITEM_SHOVEL_TNT, 5 }
         };
         for (unsigned int i = 0; i < sizeof(kTab) / sizeof(kTab[0]); i++)
             if (items[kTab[i].id]) items[kTab[i].id]->creativeTab = kTab[i].tab;

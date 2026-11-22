@@ -102,7 +102,8 @@ enum {
 
     ITEM_BEETROOT       = 457,
     ITEM_SEEDS_BEETROOT = 458,
-    ITEM_BEETROOT_SOUP  = 459
+    ITEM_BEETROOT_SOUP  = 459,
+    ITEM_SHOVEL_TNT     = 460
 };
 
 enum { DYE_WHITE = 15 };
