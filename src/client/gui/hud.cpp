@@ -769,7 +769,7 @@ const char* getBlockDescription(short id, unsigned char data) {
             case ITEM_SWORD_DIAMOND: case ITEM_SWORD_GOLD:
                 return "Deals more damage than by hand.";
             case ITEM_SHOVEL_WOOD: case ITEM_SHOVEL_STONE: case ITEM_SHOVEL_IRON:
-            case ITEM_SHOVEL_DIAMOND: case ITEM_SHOVEL_GOLD:
+            case ITEM_SHOVEL_DIAMOND: case ITEM_SHOVEL_GOLD: case ITEM_SHOVEL_TNT:
                 return "Used to dig dirt, grass, sand, gravel and snow faster than by hand.";
             case ITEM_PICKAXE_WOOD: case ITEM_PICKAXE_STONE: case ITEM_PICKAXE_IRON:
             case ITEM_PICKAXE_DIAMOND: case ITEM_PICKAXE_GOLD:

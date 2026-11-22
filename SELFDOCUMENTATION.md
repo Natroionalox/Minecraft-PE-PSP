@@ -22,11 +22,11 @@ attempt at increasing movement speed by a variable
 
 player inherits from mob who inherits from entity
 
-## Adding in tool item
+## Adding in tool itemr
 -in item.cpp add the item to the list.
 - name - must be logget in item.h with a valid id.
 - tier - (dont know what that is yet, i assume its breaking power, damage and speed)
-- ic - icon coordinate in items.png
+- genuinely idk what ic() is
  - this doesnt appear to work as ive expected, as the new item doesnt have texture and im unable to change the texture of already existing items this way
 -add the item to the presumeably item list in item.cpp
 - name - same as before
@@ -46,7 +46,14 @@ player inherits from mob who inherits from entity
  - for this ive had to comment out few lines in inventory_ui.cpp as it restricted me from adding more menus due to ui overflow
  - needed to create a creative tab icon, however since the "Bowl Pickaxe" (jesus crhist be fr) item has no working sprite, its blank
 
+## FIGURED OUT THE TEXTURE MAPPING
+- each item ID (as saved in item.h) is converted to an index of list in item_icons.h using function itemId-256
+- that index contains a number which is transformed into a coordinate on the gui_blocks.png using function in hud.cpp:
+ - (icon & 31) * 16.0f, (27 + (icon >> 5)) * 16.0f
+ - wrote a simple script for the calculation of the coordinates and index
+
 
 ## Things needed to be done:
--figure out how to create a working sprite for the modded item
 -make the ui scaleable, or otherwise functioning as to not comment out original coders allerts or whatever
+
+
