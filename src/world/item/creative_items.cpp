@@ -137,7 +137,7 @@ const CreativeEntry kItems[] = {
     { ITEM_POTATO,              1, 0 },
     { ITEM_SEEDS_BEETROOT,      1, 0 },
     { ITEM_HOE_IRON,            1, 0 },
-    { ITEM_SHOVEL_TNT,          1, 0 },
+    { ITEM_MULTI_BOWL,          1, 0 },
     { ITEM_CAKE,                1, 0 },
     { ITEM_EGG,                 1, 0 },
     { ITEM_SWORD_IRON,          1, 0 },

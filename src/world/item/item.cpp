@@ -88,7 +88,7 @@ void Item::initItems() {
     new HoeItem(ITEM_HOE_IRON,    Tier::IRON,    ic(2, 8));
     new HoeItem(ITEM_HOE_DIAMOND, Tier::EMERALD, ic(3, 8));
     new HoeItem(ITEM_HOE_GOLD,    Tier::GOLD,    ic(4, 8));
-    new ShovelItem (ITEM_SHOVEL_TNT,      Tier::IRON,    ic(7, 9));
+    new MultiItem(ITEM_MULTI_BOWL,      Tier::IRON, 8,     ic(7, 9));
 
     new ArmorItem(ITEM_HELMET_CLOTH,     ArmorItem::CLOTH,   ArmorItem::SLOT_HEAD,  ic(0, 0));
     new ArmorItem(ITEM_CHESTPLATE_CLOTH, ArmorItem::CLOTH,   ArmorItem::SLOT_TORSO, ic(0, 1));
@@ -199,7 +199,7 @@ void Item::initItems() {
             { ITEM_HATCHET_DIAMOND, 2 },{ ITEM_SWORD_GOLD, 2 },{ ITEM_SHOVEL_GOLD, 2 },
             { ITEM_PICKAXE_GOLD, 2 },{ ITEM_HATCHET_GOLD, 2 },
             { ITEM_HOE_WOOD, 2 }, { ITEM_HOE_STONE, 2 }, { ITEM_HOE_IRON, 2 },
-            { ITEM_HOE_DIAMOND, 2 }, { ITEM_HOE_GOLD, 2 }, { ITEM_SHOVEL_TNT, 2},
+            { ITEM_HOE_DIAMOND, 2 }, { ITEM_HOE_GOLD, 2 }, { ITEM_MULTI_BOWL, 2},
             { ITEM_FLINT_AND_STEEL, 2 }, { ITEM_BOW, 2 }, { ITEM_ARROW, 2 }, { ITEM_COAL, 2 },
             { ITEM_BUCKET, 2 },
             { ITEM_STRING, 2 }, { ITEM_FEATHER, 2 }, { ITEM_GUNPOWDER, 2 }, { ITEM_FLINT, 2 },
@@ -342,7 +342,7 @@ void Item::initItems() {
             { BLOCK_PUMPKIN, 2 }, { BLOCK_PUMPKIN_LIT, 2 }, { BLOCK_PUMPKIN_STEM, 2 },
             { BLOCK_CARROTS, 2 }, { BLOCK_POTATOES, 2 }, { BLOCK_BEETROOT, 2 },
 
-            { ITEM_SHOVEL_TNT, 5 }
+            { ITEM_MULTI_BOWL, 5 }
         };
         for (unsigned int i = 0; i < sizeof(kTab) / sizeof(kTab[0]); i++)
             if (items[kTab[i].id]) items[kTab[i].id]->creativeTab = kTab[i].tab;

@@ -425,7 +425,7 @@ const char* getBlockName(short id, unsigned char data) {
             case ITEM_PAINTING: return "Painting";
             case ITEM_SIGN: return "Sign";
             case ITEM_BOW: return "Bow";
-            case ITEM_SHOVEL_TNT: return "Bowl Pickaxe";
+            case ITEM_MULTI_BOWL: return "Bowl Pickaxe";
 
             case ITEM_SWORD_WOOD: return "Wooden Sword";
             case ITEM_SWORD_STONE: return "Stone Sword";
@@ -769,8 +769,10 @@ const char* getBlockDescription(short id, unsigned char data) {
             case ITEM_SWORD_DIAMOND: case ITEM_SWORD_GOLD:
                 return "Deals more damage than by hand.";
             case ITEM_SHOVEL_WOOD: case ITEM_SHOVEL_STONE: case ITEM_SHOVEL_IRON:
-            case ITEM_SHOVEL_DIAMOND: case ITEM_SHOVEL_GOLD: case ITEM_SHOVEL_TNT:
+            case ITEM_SHOVEL_DIAMOND: case ITEM_SHOVEL_GOLD:
                 return "Used to dig dirt, grass, sand, gravel and snow faster than by hand.";
+            case ITEM_MULTI_BOWL:
+                return "Used to dig in yo butt twin";
             case ITEM_PICKAXE_WOOD: case ITEM_PICKAXE_STONE: case ITEM_PICKAXE_IRON:
             case ITEM_PICKAXE_DIAMOND: case ITEM_PICKAXE_GOLD:
                 return "Required to mine stone-related blocks and ore.";

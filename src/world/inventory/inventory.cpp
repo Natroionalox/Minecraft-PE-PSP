@@ -4,7 +4,7 @@
 #include "world/entity/local_player.h"
 
 static const short kStarter[Inventory::HOTBAR] = {
-    ITEM_SHOVEL_TNT, BLOCK_COBBLESTONE, BLOCK_BRICKS, BLOCK_TORCH, BLOCK_DIRT, BLOCK_PLANKS,
+    ITEM_MULTI_BOWL, BLOCK_COBBLESTONE, BLOCK_BRICKS, BLOCK_TORCH, BLOCK_DIRT, BLOCK_PLANKS,
     BLOCK_STAIRS_BRICK, BLOCK_LOG,
 };
 static const int kStarterCount = (int)(sizeof(kStarter) / sizeof(kStarter[0]));

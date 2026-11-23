@@ -4,7 +4,7 @@
 #include "world/item/item.h"
 #include "world/level/tile/material.h"
 
-class DiggerItem : public Item {
+class DiggerItem : public virtual Item {
 public:
     virtual float getDestroySpeed(int blockId) const {
         if (blockId >= 0 && blockId < 256 && mineable[blockId]) return speed;
@@ -36,7 +36,7 @@ protected:
 
 class ShovelItem : public DiggerItem {
 public:
-    ShovelItem(short id, const Tier& tier, int icon) : DiggerItem(id, 1, tier, icon) {
+    ShovelItem(short id, const Tier& tier, int icon) : Item(id), DiggerItem(id, 1, tier, icon) {
         addTile(BLOCK_GRASS); addTile(BLOCK_DIRT); addTile(BLOCK_SAND); addTile(BLOCK_GRAVEL);
         addTile(BLOCK_TOPSNOW); addTile(BLOCK_SNOW_BLOCK); addTile(BLOCK_CLAY); addTile(BLOCK_FARMLAND);
     }
@@ -57,7 +57,7 @@ public:
     }
 public:
 
-    PickaxeItem(short id, const Tier& tier, int icon) : DiggerItem(id, 2, tier, icon) {
+    PickaxeItem(short id, const Tier& tier, int icon) : Item(id), DiggerItem(id, 2, tier, icon) {
         addTile(BLOCK_COBBLESTONE);
 
         addTile(BLOCK_DOUBLE_SLAB); addTile(BLOCK_SLAB);
@@ -98,7 +98,7 @@ public:
         return DiggerItem::getDestroySpeed(blockId);
     }
 public:
-    HatchetItem(short id, const Tier& tier, int icon) : DiggerItem(id, 3, tier, icon) {
+    HatchetItem(short id, const Tier& tier, int icon) : Item(id), DiggerItem(id, 3, tier, icon) {
         addTile(BLOCK_PLANKS); addTile(BLOCK_BOOKSHELF);
         addTile(BLOCK_LOG);
         addTile(BLOCK_CHEST);

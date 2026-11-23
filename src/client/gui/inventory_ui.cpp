@@ -157,7 +157,7 @@ static ItemInstance creativeTabIcon(int tab) {
         case 1:  return ItemInstance(BLOCK_BOOKSHELF, 1, 0);
         case 2:  return ItemInstance(ITEM_SWORD_IRON, 1, 0);
         case 3:  return ItemInstance(ITEM_SEEDS_WHEAT, 1, 0);
-        case 4:  return ItemInstance(ITEM_SHOVEL_TNT, 1, 0);
+        case 4:  return ItemInstance(ITEM_MULTI_BOWL, 1, 0);
         default: return ItemInstance(BLOCK_BRICKS, 1, 0);
     }
 }
